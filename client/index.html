@@ -4,40 +4,45 @@
     <link rel="stylesheet" href="styles.css">
     <title>Back End Assessment</title>
   </head>
-  <body class="container">
-    <button id="complimentButton">Get a compliment</button>
+  <body>
+    <header>
+      Assessment-4
+    </header>
+    <main>
 
-    <button id="fortune">Receive a fortune</button>
-
-    <form id="fortuneForm">
-      <input type="text" id="fortuneAdder" placeholder="Add a Fortune">
-      <button>Add</button>
-    </form>
-
-    <form id="superChar">
-      <input type="text" id="favHero" placeholder="Favorite Superhero">
-      <!-- <input type="text" id="powers" placeholder="Abilites"> -->
-      <input type="text" id="img" placeholder="Paste image URL">
-      <section id="ratings-container">
-        <p>Strength:</p>
-        <div id="radio-container">
-          <label for="one">
-            <input
-            type="radio"
-            name="Strength"
-            value="1"
-            id="one"/>
-                1
-              </label>
-              <label for="two">
-                <input
-                type="radio"
-                name="Strength"
-                value="2"
-                id="two"/>
-                2
-              </label>
-              <label for="three">
+      <button id="complimentButton">Get a compliment</button>
+      
+      <button id="fortune">Receive a fortune</button>
+      
+      <form id="fortuneForm">
+        <input type="text" id="fortuneAdder" placeholder="Add a Fortune">
+        <button>Add</button>
+      </form>
+      
+      <form id="superChar">
+        <input type="text" id="favHero" placeholder="Favorite Superhero">
+        <!-- <input type="text" id="powers" placeholder="Abilites"> -->
+        <input type="text" id="img" placeholder="Paste image URL">
+        <section id="Strength-container">
+          <p>Strength:</p>
+          <div id="radio-container">
+            <label for="one">
+              <input
+              type="radio"
+              name="Strength"
+              value="1"
+              id="one"/>
+              1
+            </label>
+            <label for="two">
+              <input
+              type="radio"
+              name="Strength"
+              value="2"
+              id="two"/>
+              2
+            </label>
+            <label for="three">
                 <input
                 type="radio"
                 name="Strength"
@@ -61,14 +66,16 @@
                 id="five"/>
                 5
               </label>
-        </div>
-      </section>
-      <button id="addSuper">Add Hero</button>
-    </form>
-    
-    <section id="hero-container"></section>
-    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="index.js"></script>
-  </body>
-</html>
+            </div>
+          </section>
+          <button id="addSuper">Add Hero</button>
+        </form>
+        
+        <section id="hero-container"></section>
+      </main>
+        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="index.js"></script>
+      </body>
+      </html>
+      

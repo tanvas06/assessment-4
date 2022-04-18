@@ -51,7 +51,7 @@ input[type='text'] {
     background-color: blanchedalmond;
 }
 
-/* #Strength-container {
+#Strength-container {
     width: 85%;
 }
 
@@ -107,4 +107,4 @@ input[type='text'] {
 
 .btns-container > button {
     width: 20px;
-} */
+}

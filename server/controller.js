@@ -29,12 +29,16 @@ addFortune: (req,res) => {
           fortunes.push(newFortune)
           console.log(fortunes)
       },
+      getHeros: (req,res) => {
+          res.status(200).send(heros)
+      },
 
       addHero: (req,res) => {
-          const {name, imageURL} = req.body
+          const {name, Strength, imageURL} = req.body
           let newHero = {
               id: globalID,
               name,
+              Strength,
               imageURL
           }
           heros.push(newHero)
@@ -42,18 +46,24 @@ addFortune: (req,res) => {
           globalID++
           console.log(heros)
       },
-      editHero: (req,res) => {
+      updateHero: (req,res) => {
         const {id} = req.params;
-        const {type} = req.body;
+        const body = req.body;
         let index = heros.findIndex(elem => +elem.id === +id)
-        if(type === 'minus' && heros[index].rating > 0){
-            heros[index].rating -= 1;
+        console.log(heros[index]);
+        if(body['type'] === 'minus' && heros[index].Strength > 0){
+            heros[index].Strength -= 1;
             res.status(200).send(heros);
-        } else if(type === `plus` && heros[index].rating < 5){
-            heros[index].rating += 1;
+        } else if(body['type'] === `plus` && heros[index].Strength < 5){
+            heros[index].Strength += 1;
             res.status(200).send(heros);
         } else {
             res.status(400).send(`Something went wrong`)
         }
+      },
+      deleteHero: (req,res) => {
+        let index = heros.findIndex(elem => elem.id === +req.params.id)
+        heros.splice(index, 1);
+        res.status(200).send(heros);
       }
 }
